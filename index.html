@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Разработка собственной базы знаний</title>
+
+		<link rel="stylesheet" href="fonts/roboto.css">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section data-markdown>
+					<textarea data-template>
+						### Разработка собственной базы знаний
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## О чем я расскажу
+
+						- Зачем мне wiki
+						- Про то какие инструменты есть
+						- Про то как я раньше вел свою базу знаний
+						- К чему пришел я
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Зачем мне wiki
+
+						- Для быстрого поиска ответов
+						- Для подготовки к собеседованиям
+						- Для того, чтобы нужные данные "не потерялись" в интернете (статьи могут удаляться, сайты могут умирать)
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Wiki системы
+
+						- Confluence
+						- Mediawiki (движок википедии)
+						- И т д
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Минусы готовых решений
+
+						- требуют наличия хостинга
+						- слишком сложные (требуют адмистрирование и настройку)
+						- некоторые из решений платные
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### Мои требования к wiki системе
+
+						<ul style="font-size: 0.8em">
+							<li>должна запускаться на бесплатном хостинге</li>
+							<li>хостинг не должен иметь ограничений (на количество трафика и т д)</li>
+							<li>написание шаблонов не должно заставлять верстать (писать html, js, css)</li>
+							<li>шаблоны должны поддерживать подсветку кода, выделение цитат, смену стиля текста и т д</li>
+							<li>данные должны быть доступны всегда и везде</li>
+							<li>добавление новых заметок должно быть максимально простым</li>
+							<li>хочется добавлять заметки не только с комьютера</li>
+						</ul>
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### Как я начинал вести базу знаний
+
+						- txt
+						- doc
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### База знаний 1.0
+
+						Markdown и GitLab (GitHub и т д)
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### Достоинства версии 1.0
+
+						<ul style="font-size: 0.8em">
+							<li>не нужен хостинг</li>
+							<li>синтаксис markdown максимально простой</li>
+							<li>markdown поддерживает все виды форматирования, которые нужны (подсветка кода и т д)</li>
+							<li>заметки доступны всегда и везде</li>
+							<li>относительно просто добавлять заметки</li>
+						</ul>
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### Недостатки версии 1.0
+
+						- GitLab и д.р. плохо поддерживают markdown
+						- встроенный онлайн редактор не удобно использовать на мобильных устройствах
+						- плохая поддержка markdown
+						- неожиданно может поплыть верстка
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### База знаний 2.0
+
+						- GitLab продолжает хранить markdown файлы
+						- реализован скрипт для конвертации *.md в *.html
+						- реализована интеграция с git
+						- публикация при помощи GitHub Pages
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### Что из себя представляет разроботанный скрипт
+
+						- python скрипт
+						- python-markdown
+						- pygments
+						- pymdown-extensions
+						- jinja2
+						- gitpython
+						- bash скрипт для сборки
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### Сложность реализации
+
+						Разработка заняла 2 вечера
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### Достоинства версии 2.0
+
+						<ul>
+							<li>теперь верстка неожиданно не поплывет</li>
+							<li>можно использовать расширения markdown</li>
+							<li>хостинг бесплатен</li>
+						</ul>
+
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### Недостатки версии 2.0
+
+						Для меня их нет
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### Планы на будующие
+
+						- создание pipline для автоматической публикии обновлений
+						- реализация в pipline проверки орфографии
+						- создание собственного онлайн редактора
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						# Вопросы
+
+						<br>
+						получивщаяся база знаний - https://aleksey925.github.io/knowledge-base
+					</textarea>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
